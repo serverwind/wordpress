@@ -1,3 +1,4 @@
+<?php 
 // 2500 to 2.5k
 
 function getPostViews($postID) {
