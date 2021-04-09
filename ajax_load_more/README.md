@@ -1,36 +1,37 @@
 #AJAX LOAD MORE
 
 Best method what I find to make button what will load more posts on click.
+
 Thanks https://artisansweb.net/load-wordpress-post-ajax/ 
 
-To make this method works in archive.php , I did several changes.
+To make this method works in <b>archive.php</b> , I did several changes.
 
-In archive.php you should get ID of current category:
+In <b>archive.php</b> you should get ID of current category:
 
-$category = get_queried_object();
+<code>$category = get_queried_object();</code>
 
 To loop posts from this category in archive.php add:
 
-'cat' => $category->term_id,
+<code>'cat' => $category->term_id,</code>
 
 Somethere below add:
 
-&lt;div style='display:none' id="cat-id"&gt;&lt;?php echo $category->term_id; ?&gt;&lt;/div&gt;
+<code>&lt;div style='display:none' id="cat-id"&gt;&lt;?php echo $category->term_id; ?&gt;&lt;/div&gt;</code>
 
-Now in our AJAX custom.js you should get this 'cat-id' value:
+Now in our AJAX <b>custom.js</b> you should get this <i>'cat-id'</i> value:
 
-var categoryId=document.getElementById('cat-id').innerHTML;
+<code>var categoryId=document.getElementById('cat-id').innerHTML;</code>
 
-and in var data add
+and in <i>var data</i> add
 
-catid:categoryId
+<code>catid:categoryId</code>
 
 Last one, in functions.php edit:
 
-$args = array( 
+<code>$args = array( </code>
 
 and add this request:
 
-'cat' => $_REQUEST['catid'],
+<code>'cat' => $_REQUEST['catid'],</code>
 
 Thats all.
