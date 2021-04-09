@@ -15,7 +15,7 @@ To loop posts from this category in archive.php add:
 
 Somethere below add:
 
-<div style='display:none' id="cat-id"><?php echo $category->term_id; ?></div>
+&lt;div style='display:none' id="cat-id"&gt;&lt;?php echo $category->term_id; ?&gt;&lt;/div&gt;
 
 Now in our AJAX custom.js you should get this 'cat-id' value:
 
