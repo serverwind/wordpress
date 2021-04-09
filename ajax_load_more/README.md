@@ -1,4 +1,4 @@
-#AJAX LOAD MORE
+<h1>AJAX LOAD MORE</h1>
 
 Best method what I find to make button what will load more posts on click.
 
